@@ -1,8 +1,16 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './Email.css'
 import axios from "axios";
+import Axios from 'axios';
 const Email = () => {
-
+    const [email, updateEmail] = useState("");
+    const emailpost = async (e) => {
+        e.preventDefault()
+        await Axios.post("http://localhost:5000/teacher/student/sendmail", {
+            email: email
+        }).then(res => console.log(res))
+            .catch(err => console.log(err))
+    }
     return (
 
         <main>
@@ -27,14 +35,14 @@ const Email = () => {
                 <h2 className="text-headline">Ed-o-Matic</h2>
                 <h2 className="text-subheadline">The Notifier</h2>
             </div>
-            <form>
+            <form onSubmit={emailpost}>
                 <span>
                     <label for="email" className="text-small-uppercase">Email</label>
-                    <input className="text-body" id="email" name="email" type="email" required />
+                    <input className="text-body" id="email" name="email" type="email" required onChange={(e) => updateEmail(e.target.value)} />
                 </span>
                 <span>
                     <label for="email" className="text-small-uppercase">Message</label>
-                    <input className="text-body" id="email" name="email" type="email" required />
+                    <input className="text-body" id="email" name="email" type="text" required />
                 </span>
 
                 <input className="text-small-uppercase" id="submit" type="submit" value="Send Email" />
