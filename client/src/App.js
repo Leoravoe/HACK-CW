@@ -9,6 +9,7 @@ import StudentDashboard from './component/StudentDashboard/StudentDashboard';
 import TeacherDashboard from './component/TeacherDashboard/TeacherDashboard';
 import FormCounselling from './component/Counsellingform/FormCounselling';
 import FormDropout from './component/Dropoutform/Dropoutform';
+import Email from './component/Email/Email'
 const App = () => {
   return (
     <div>
@@ -22,6 +23,7 @@ const App = () => {
         <Route path='/TeacherDashboard' component={TeacherDashboard} />
         <Route path='/form1' component={FormCounselling} />
         <Route path='/form2' component={FormDropout} />
+        <Route path='/email' component={Email} />
       </Switch>
     </div>
   )
