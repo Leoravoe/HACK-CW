@@ -1,10 +1,20 @@
 const mongoose = require('mongoose')
-const jwt = require('jsonwebtoken');
+const jwt = require('jsonwebtoken')
+require("dotenv").config();
+const nodemailer = require('nodemailer');
 const User = require('../models/teacher')
 const Studentupload = require('../models/studentupload')
 const StudentScore = require('../models/studentScore')
 const Grid = require('gridfs-stream')
 const conn = require('../db/conn')
+
+let transporter = nodemailer.createTransport({
+    service: 'gmail',
+    auth: {
+      user: process.env.EMAIL_USER,
+      pass: process.env.EMAIL_PASSWORD
+    }
+  });
 
 
 const maxAge = 3 * 24 * 60 * 60;
@@ -132,5 +142,23 @@ module.exports.postScore = async(req, res)=>{
         res.status(201).send('Hogaya')
     } catch (error) {
         res.status(500).json({error})
+    }
+}
+
+module.exports.sendmail = async (req, res) => {
+    const email = req.body.email
+    // 'shawharsh10@gmail.com, harshshaw5@gmail.com'
+    try {
+        let mailOptions = {
+            from: process.env.EMAIL_USER,
+            to: email,
+            subject: 'Plagiarism Detected in your assignment',
+            text: 'Plagiarism Detected in your assignment'
+          };
+          
+        let info = await transporter.sendMail(mailOptions);
+        res.status(200).json({info})
+    } catch (error) {
+        console.log(error.message)
     }
 }

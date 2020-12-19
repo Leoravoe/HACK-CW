@@ -9,6 +9,7 @@ router.get('/logout', tController.logout_get);
 router.get('/:id',tController.getallfiles)
 router.get('/student/:filename',tController.getfiles)
 router.post('/student/score',tController.postScore)
+router.post('/student/sendmail',tController.sendmail)
 
 
 module.exports = router;
