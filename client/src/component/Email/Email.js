@@ -1,53 +1,41 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
+import { Redirect } from 'react-router-dom'
 import './Email.css'
 import axios from "axios";
 import Axios from 'axios';
 const Email = () => {
     const [email, updateEmail] = useState("");
+    const [validation, updateValidation] = useState(false);
     const emailpost = async (e) => {
         e.preventDefault()
         await Axios.post("http://localhost:5000/teacher/student/sendmail", {
             email: email
-        }).then(res => console.log(res))
+        }).then(res => updateValidation(true))
             .catch(err => console.log(err))
+    }
+
+    if (validation) {
+        return <Redirect to="/TeacherDashboard" ></Redirect>
     }
     return (
 
-        <main>
-            <figure>
-                <picture>
-                    <source media="(min-width: 768px)"
-                        srcset="//my-assets.netlify.com/codepen/dailyui-001/img.png     340w,
-                          //my-assets.netlify.com/codepen/dailyui-001/img@2x.png  680w,
-                          //my-assets.netlify.com/codepen/dailyui-001/img@3x.png 1020w"
-                        sizes="360px" />
-                    <source srcset="//my-assets.netlify.com/codepen/dailyui-001/img-small.png     340w,
-                          //my-assets.netlify.com/codepen/dailyui-001/img-small@2x.png  680w,
-                          //my-assets.netlify.com/codepen/dailyui-001/img-small@3x.png 1020w"
-                        sizes="(min-width: 320px) 290px,
-                          (min-width: 480px) 435px
-                          (min-width: 640px) 580px" />
-                    <img src="//my-assets.netlify.com/codepen/dailyui-001/img.png"
-                        alt="Citymap illustration" />
-                </picture>
-            </figure>
-            <div className="headline">
-                <h2 className="text-headline">Ed-o-Matic</h2>
-                <h2 className="text-subheadline">The Notifier</h2>
-            </div>
-            <form onSubmit={emailpost}>
-                <span>
-                    <label for="email" className="text-small-uppercase">Email</label>
-                    <input className="text-body" id="email" name="email" type="email" required onChange={(e) => updateEmail(e.target.value)} />
-                </span>
-                <span>
-                    <label for="email" className="text-small-uppercase">Message</label>
-                    <input className="text-body" id="email" name="email" type="text" required />
-                </span>
 
-                <input className="text-small-uppercase" id="submit" type="submit" value="Send Email" />
+
+        <div className="emailpost">
+            <form className="emailpost2-info container" onSubmit={emailpost}>
+
+                <div className="form-group ">
+                    <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" onChange={(e) => updateEmail(e.target.value)} />
+
+                </div>
+                <div className="form-group">
+
+                    <input type="text" className="form-control" id="exampleInputPassword1" placeholder="Message" />
+                </div>
+                <button type="submit" className="btn btn-primary">Submit</button>
+                <a href="/TeacherDashboard" className="btn btn-danger">Cancel </a>
             </form>
-        </main>
+        </div>
     )
 }
 

@@ -28,8 +28,8 @@ const TeacherDashboard = () => {
     let Component = (
         pdf.map(data => {
             return (
-                <div key={data.pdfID} class="card">
-                    <div class="card-body">
+                <div key={data.pdfID} className="card">
+                    <div className="card-body">
                         {data.name} {data.subject}
                     </div>
                     <a href={`http://localhost:5000/teacher/student/${data.pdffilename}`} target="_blank">PDF</a>
@@ -71,39 +71,39 @@ const TeacherDashboard = () => {
         <div>
             {/* This section is for NAVBAR */}
 
-            <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                <a class="navbar-brand medico" href="#">Navbar</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
+            <nav className="navbar navbar-expand-lg navbar-light bg-light">
+                <a className="navbar-brand medico" href="#">Ed-o-Matic</a>
+                <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span className="navbar-toggler-icon"></span>
                 </button>
 
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav ml-auto">
-                        <li class="nav-item active">
-                            <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+                <div className="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul className="navbar-nav ml-auto">
+                        <li className="nav-item active">
+                            <a className="nav-link" href="/">Home <span className="sr-only">(current)</span></a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">About</a>
+                        <li className="nav-item">
+                            <a className="nav-link" href="#">About</a>
                         </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <li className="nav-item dropdown">
+                            <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 Sign in
               </a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="/loginStudent">As a student</a>
-                                <a class="dropdown-item" href="/loginTeacher">As a teacher</a>
-                                <div class="dropdown-divider"></div>
+                            <div className="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a className="dropdown-item" href="/loginStudent">As a student</a>
+                                <a className="dropdown-item" href="/loginTeacher">As a teacher</a>
+                                <div className="dropdown-divider"></div>
 
                             </div>
                         </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <li className="nav-item dropdown">
+                            <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 Sign up
               </a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="/signupStudent">As a student</a>
-                                <a class="dropdown-item" href="/signupTeacher">As a teacher</a>
-                                <div class="dropdown-divider"></div>
+                            <div className="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a className="dropdown-item" href="/signupStudent">As a student</a>
+                                <a className="dropdown-item" href="/signupTeacher">As a teacher</a>
+                                <div className="dropdown-divider"></div>
 
                             </div>
                         </li>
@@ -116,27 +116,27 @@ const TeacherDashboard = () => {
             {/* END */}
 
 
-            <section class="colored-section">
-                <div class="row">
-                    <div class="col-lg-4">
-                        <div class="card ml-5 detail">
-                            <div class="card-body">
-                                <h5 class="card-title">{localStorage.getItem('userID')}</h5>
+            <section className="colored-section">
+                <div className="row">
+                    <div className="col-lg-4">
+                        <div className="card ml-5 detail">
+                            <div className="card-body">
+                                <h5 className="card-title fas fa-id-card"> {localStorage.getItem('userID')}</h5>
                             </div>
                         </div>
                     </div>
 
-                    <div class="col-lg-4">
-                        <div class="card ml-5 detail">
-                            <div class="card-body">
-                                <h5 class="card-title">{localStorage.getItem('name')}</h5>
+                    <div className="col-lg-4">
+                        <div className="card ml-5 detail">
+                            <div className="card-body">
+                                <h5 className="card-title fas fa-signature"> {localStorage.getItem('name')}</h5>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4">
-                        <div class="card ml-5 detail">
-                            <div class="card-body">
-                                <h5 class="card-title">{localStorage.getItem('class')}</h5>
+                    <div className="col-lg-4">
+                        <div className="card ml-5 detail">
+                            <div className="card-body">
+                                <h5 className="card-title fas fa-chalkboard-teacher"> {localStorage.getItem('class')}</h5>
                             </div>
                         </div>
                     </div>
@@ -144,40 +144,41 @@ const TeacherDashboard = () => {
             </section>
 
 
-            <section class="container">
+            <section className="container">
 
 
-                <div class="submission">
+                <div className="submission">
 
 
-                    <div class="card mt-5 w-50 card1 student-pdf">
+                    <div className="card mt-5 w-50 card1 student-pdf">
 
-                        <div class="card-body text-center">
-                            <h3 class="heading">Student's Pdf</h3>
+                        <div className="card-body text-center">
+                            <h3 className="heading">Student's Pdf</h3>
 
                         </div>
 
-                        <div class="card-body mx-auto">
+                        <div className="card-body mx-auto">
 
                             {Component}
                         </div>
                     </div>
 
-                    <div class="card mt-5 w-50 card1" >
+                    <div className="card mt-5 w-50 card1" >
 
-                        <div class="card-body text-center">
-                            <h3 class="heading">Card title</h3>
-                            <p class="card-text"></p>
+                        <div className="card-body text-center">
+                            <h3 className="heading">Marks</h3>
+                            <p className="card-text"></p>
                         </div>
 
-                        <form class="card-body mx-auto" onSubmit={marksPost}>
-                            <label class="marks">Marks: </label>
+                        <form className="card-body mx-auto" onSubmit={marksPost}>
+                            <label className="marks">Marks: </label>
                             <input type="text" name="marks" placeholder="Enter Marks" onChange={(e) => updateMarks(e.target.value)} /><br />
                             <label>Student id: </label>
                             <input type="text" name="stu_id" placeholder="Enter Student Id" onChange={(e) => updateStudentId(e.target.value)} /><br />
                             <label>Subject </label>
                             <input type="text" name="stu_id" placeholder="Subject" onChange={(e) => updateSubject(e.target.value)} /><br />
-                            <input class="submit-button" type="submit" name="submit" />
+                            <btn className=" btn btn-success" type="submit" name="submit" >Submit</btn>
+                            <a className="btn btn-danger" href='/email'>Send Email</a>
 
                         </form>
                     </div>
@@ -188,11 +189,11 @@ const TeacherDashboard = () => {
             {/* this section is for pdf uploads */}
 
             <form onSubmit={model2} >
-                <section class="upload">
-                    <div class="upload-card">
+                <section className="upload">
+                    <div className="upload-card">
                         <input type="file" name="file" onChange={(e) => updatepdf1(e.target.files[0])} />
                     </div>
-                    <div class="upload-card2">
+                    <div className="upload-card2">
                         <input type="file" name="file" onChange={(e) => updatepdf2(e.target.files[0])} />
                     </div>
                     <br />
@@ -202,13 +203,13 @@ const TeacherDashboard = () => {
             <form onSubmit={model}>
                 <button type='submit' className="btn btn-primary" > Summary</button>
             </form>
-            <p class='similar-output'>Similarity Score: {similar}</p>
+            <p className='similar-output'>Similarity Score: {similar}</p>
             {/* END */}
 
             {/* This section is for pdf summary */}
-            <div class="container">
-                <h3 class="heading head">Summary</h3>
-                <div class=" w-100 border border-dark  summary">
+            <div className="container">
+                <h3 className="heading head">Summary</h3>
+                <div className=" w-100 border border-dark  summary">
                     {!pdfValid ? <Loader /> : <p>{summary}</p>}
                 </div>
                 <br />
