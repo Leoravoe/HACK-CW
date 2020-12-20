@@ -177,7 +177,7 @@ const TeacherDashboard = () => {
                             <input type="text" name="stu_id" placeholder="Enter Student Id" onChange={(e) => updateStudentId(e.target.value)} /><br />
                             <label>Subject </label>
                             <input type="text" name="stu_id" placeholder="Subject" onChange={(e) => updateSubject(e.target.value)} /><br />
-                            <btn className=" btn btn-success" type="submit" name="submit" >Submit</btn>
+                            <input className=" btn btn-success" type="submit" ></input>
                             <a className="btn btn-danger" href='/email'>Send Email</a>
 
                         </form>
