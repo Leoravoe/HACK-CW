@@ -1,7 +1,7 @@
 ## HackCW - Code Brewery
 
 ## Knewton Ed - Smart AI-Digital Based Solutions for Education Analysing
-<img src="">
+<img src="https://github.com/Leoravoe/HACK-CW/blob/main/Profiles_Pics/hcw-main.jpeg">
 
 
 ### Abstract
@@ -65,11 +65,11 @@ Keeping all the conerns in our mind , we have tried to develop a smart AI Based 
    <br><br>
   
   ### Demo :
-   <img src="https://github.com/harshshaw/HACKOFF/blob/main/Profiles_Pics/sample.jpeg">
-  <img src="https://github.com/harshshaw/HACKOFF/blob/main/Profiles_Pics/sample1.jpeg">
-    <img src="https://github.com/harshshaw/HACKOFF/blob/main/Profiles_Pics/sample2.jpeg">
-      <img src="https://github.com/harshshaw/HACKOFF/blob/main/Profiles_Pics/sample3.jpeg">
-        <img src="https://github.com/harshshaw/HACKOFF/blob/main/Profiles_Pics/sample4.jpeg">
+   <img src="https://github.com/Leoravoe/HACK-CW/blob/main/Profiles_Pics/hcw-login.jpeg">
+  <img src="https://github.com/Leoravoe/HACK-CW/blob/main/Profiles_Pics/hcw-sgnup.jpeg">
+    <img src="https://github.com/Leoravoe/HACK-CW/blob/main/Profiles_Pics/hcw2.jpeg">
+      <img src="https://github.com/Leoravoe/HACK-CW/blob/main/Profiles_Pics/hcw3.jpeg">
+        <img src="https://github.com/Leoravoe/HACK-CW/blob/main/Profiles_Pics/hcw4.jpeg">
          <img src="https://github.com/harshshaw/HACKOFF/blob/main/Profiles_Pics/sample5.jpeg">
         <br>
  
