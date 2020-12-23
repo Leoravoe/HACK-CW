@@ -1,6 +1,6 @@
 ## HackCW - Code Brewery
 
-## Knewton Ed - Smart AI-Digital Based Solutions for Education Analysing
+## Ed-O-Matic - Smart AI-Digital Based Solutions for Education Analysing
 <img src="https://github.com/Leoravoe/HACK-CW/blob/main/Profiles_Pics/hcw-main.jpeg">
 
 
